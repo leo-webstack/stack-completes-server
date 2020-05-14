@@ -1,0 +1,251 @@
+<?php
+
+namespace App\Document;
+
+use ApiPlatform\Core\Annotation\ApiFilter;
+use ApiPlatform\Core\Annotation\ApiResource;
+use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
+use ApiPlatform\Core\Bridge\Doctrine\MongoDbOdm\Filter\OrderFilter;
+use ApiPlatform\Core\Bridge\Doctrine\MongoDbOdm\Filter\SearchFilter;
+
+/**
+ * Class Blueprint
+ * @package App\Document
+ * @ApiResource
+ * @ODM\Document
+ * @ApiFilter(OrderFilter::class, properties={"merchant_xp"}, arguments={"orderParameterName"="order"})
+ * @ApiFilter(SearchFilter::class, properties={"tier": "exact", "type": "exact"})
+ */
+class Blueprint
+{
+    /**
+     * @ODM\Id
+     */
+    protected $id;
+
+    /**
+     * @ODM\Field(type="string")
+     */
+    protected $name;
+
+    /**
+     * @ODM\Field(type="string")
+     */
+    protected $type;
+
+    /**
+     * @ODM\Field(type="string")
+     */
+    protected $unlock_prerequisite;
+
+    /**
+     * @ODM\Field(type="string")
+     */
+    protected $research_scrolls;
+
+    /**
+     * @ODM\Field(type="string")
+     */
+    protected $tier;
+
+    /**
+     * @ODM\Field(type="float")
+     */
+    protected $value;
+
+    /**
+     * @ODM\Field(type="float")
+     */
+    protected $crafting_time;
+
+    /**
+     * @ODM\Field(type="float")
+     */
+    protected $merchant_xp;
+
+    /**
+     * @ODM\Field(type="float")
+     */
+    protected $worker_xp;
+
+    /**
+     * @ODM\Field(type="float")
+     */
+    protected $market_value;
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id): void
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param mixed $name
+     */
+    public function setName($name): void
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param mixed $type
+     */
+    public function setType($type): void
+    {
+        $this->type = $type;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUnlockPrerequisite()
+    {
+        return $this->unlock_prerequisite;
+    }
+
+    /**
+     * @param mixed $unlock_prerequisite
+     */
+    public function setUnlockPrerequisite($unlock_prerequisite): void
+    {
+        $this->unlock_prerequisite = $unlock_prerequisite;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getResearchScrolls()
+    {
+        return $this->research_scrolls;
+    }
+
+    /**
+     * @param mixed $research_scrolls
+     */
+    public function setResearchScrolls($research_scrolls): void
+    {
+        $this->research_scrolls = $research_scrolls;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTier()
+    {
+        return $this->tier;
+    }
+
+    /**
+     * @param mixed $tier
+     */
+    public function setTier($tier): void
+    {
+        $this->tier = $tier;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getValue()
+    {
+        return $this->value;
+    }
+
+    /**
+     * @param mixed $value
+     */
+    public function setValue($value): void
+    {
+        $this->value = $value;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCraftingTime()
+    {
+        return $this->crafting_time;
+    }
+
+    /**
+     * @param mixed $crafting_time
+     */
+    public function setCraftingTime($crafting_time): void
+    {
+        $this->crafting_time = $crafting_time;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMerchantXp()
+    {
+        return $this->merchant_xp;
+    }
+
+    /**
+     * @param mixed $merchant_xp
+     */
+    public function setMerchantXp($merchant_xp): void
+    {
+        $this->merchant_xp = $merchant_xp;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getWorkerXp()
+    {
+        return $this->worker_xp;
+    }
+
+    /**
+     * @param mixed $worker_xp
+     */
+    public function setWorkerXp($worker_xp): void
+    {
+        $this->worker_xp = $worker_xp;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMarketValue()
+    {
+        return $this->market_value;
+    }
+
+    /**
+     * @param mixed $market_value
+     */
+    public function setMarketValue($market_value): void
+    {
+        $this->market_value = $market_value;
+    }
+}
