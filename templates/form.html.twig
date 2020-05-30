@@ -1,5 +1,6 @@
 {{ form_start(form) }}
+    <h2>{{ form.vars.label }}</h2>
     {{ form_errors(form) }}
-
+    {{ form_rest(form) }}
     <button type="submit">Submit</button>
 {{ form_end(form) }}

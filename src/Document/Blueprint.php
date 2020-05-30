@@ -14,7 +14,7 @@ use ApiPlatform\Core\Bridge\Doctrine\MongoDbOdm\Filter\SearchFilter;
  * @ApiResource
  * @ODM\Document
  * @ApiFilter(OrderFilter::class, properties={"merchant_xp"}, arguments={"orderParameterName"="order"})
- * @ApiFilter(SearchFilter::class, properties={"tier": "exact", "type": "exact"})
+ * @ApiFilter(SearchFilter::class, properties={"tier": "exact", "type": "iexact"})
  */
 class Blueprint
 {
@@ -74,6 +74,26 @@ class Blueprint
     protected $market_value;
 
     /**
+     * @ODM\Field(type="int")
+     */
+    protected $discount_energy;
+
+    /**
+     * @ODM\Field(type="int")
+     */
+    protected $surcharge_energy;
+
+    /**
+     * @ODM\Field(type="int")
+     */
+    protected $suggest_energy;
+
+    /**
+     * @ODM\Field(type="int")
+     */
+    protected $speed_up_energy;
+
+    /**
      * @return mixed
      */
     public function getId()
@@ -118,7 +138,7 @@ class Blueprint
      */
     public function setType($type): void
     {
-        $this->type = $type;
+        $this->type = strtoupper($type);
     }
 
     /**
@@ -247,5 +267,69 @@ class Blueprint
     public function setMarketValue($market_value): void
     {
         $this->market_value = $market_value;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDiscountEnergy()
+    {
+        return $this->discount_energy;
+    }
+
+    /**
+     * @param mixed $discount_energy
+     */
+    public function setDiscountEnergy($discount_energy): void
+    {
+        $this->discount_energy = $discount_energy;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSurchargeEnergy()
+    {
+        return $this->surcharge_energy;
+    }
+
+    /**
+     * @param mixed $surcharge_energy
+     */
+    public function setSurchargeEnergy($surcharge_energy): void
+    {
+        $this->surcharge_energy = $surcharge_energy;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSuggestEnergy()
+    {
+        return $this->suggest_energy;
+    }
+
+    /**
+     * @param mixed $suggest_energy
+     */
+    public function setSuggestEnergy($suggest_energy): void
+    {
+        $this->suggest_energy = $suggest_energy;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSpeedUpEnergy()
+    {
+        return $this->speed_up_energy;
+    }
+
+    /**
+     * @param mixed $speed_up_energy
+     */
+    public function setSpeedUpEnergy($speed_up_energy): void
+    {
+        $this->speed_up_energy = $speed_up_energy;
     }
 }
