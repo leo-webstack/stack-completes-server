@@ -14,7 +14,7 @@ use ApiPlatform\Core\Bridge\Doctrine\MongoDbOdm\Filter\SearchFilter;
  * @ApiResource
  * @ODM\Document
  * @ApiFilter(OrderFilter::class, properties={"merchant_xp"}, arguments={"orderParameterName"="order"})
- * @ApiFilter(SearchFilter::class, properties={"tier": "exact", "type": "iexact"})
+ * @ApiFilter(SearchFilter::class, properties={"id": "exact", "tier": "exact", "type": "iexact"})
  */
 class Blueprint
 {

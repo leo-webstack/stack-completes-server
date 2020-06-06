@@ -4,7 +4,6 @@ namespace App\Controller\Web;
 
 use App\Form\ImportForm;
 use App\Services\BlueprintManager;
-use App\Services\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Exception;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
@@ -21,7 +20,7 @@ class DefaultController extends AbstractController
      */
     public function index()
     {
-        return $this->render('ts-app.html.twig');
+        return $this->redirectToRoute('st.index');
     }
 
     /**
