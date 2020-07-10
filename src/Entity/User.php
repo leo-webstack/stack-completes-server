@@ -2,12 +2,14 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
+ * @ApiResource
  */
 class User implements UserInterface
 {
@@ -47,6 +49,11 @@ class User implements UserInterface
      * @ORM\Column(type="string", nullable=true)
      */
     private $apiToken;
+
+    /**
+     * @ORM\OneToOne(targetEntity=UserFavorite::class, cascade={"persist", "remove"})
+     */
+    private $favorite;
 
     public function getId(): ?int
     {
@@ -168,5 +175,17 @@ class User implements UserInterface
     public function setApiToken(string $apiToken): void
     {
         $this->apiToken = $apiToken;
+    }
+
+    public function getFavorite(): ?UserFavorite
+    {
+        return $this->favorite;
+    }
+
+    public function setFavorite(?UserFavorite $favorite): self
+    {
+        $this->favorite = $favorite;
+
+        return $this;
     }
 }

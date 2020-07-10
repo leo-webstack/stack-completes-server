@@ -9,21 +9,23 @@ use App\Form\UserRegistration;
 use App\Services\UserManager;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class SecurityController extends AbstractHGController
 {
     /**
-     * @Route("/login", name="login", methods={"POST"})
+     * @Route("/login", name="api_login", methods={"POST"})
      * @param Request $request
-     * @return void
+     * @return Response
      */
     public function login(Request $request)
     {
+        /** @var User $user */
         $user = $this->getUser();
 
-        $this->json([
+        return $this->json([
+            'apiToken' => 'TODO',
             'username' => $user->getUsername(),
             'roles' => $user->getRoles()
         ]);

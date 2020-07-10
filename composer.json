@@ -6,6 +6,7 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "ext-json": "*",
+        "ext-pdo": "*",
         "api-platform/api-pack": "^1.2",
         "doctrine/mongodb-odm-bundle": "^4.1",
         "google/apiclient": "^2.4",

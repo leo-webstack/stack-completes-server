@@ -332,4 +332,19 @@ class Blueprint
     {
         $this->speed_up_energy = $speed_up_energy;
     }
+
+    public function getRatioValueXp(): float
+    {
+        return $this->market_value > 0 ? $this->merchant_xp / $this->market_value : 0;
+    }
+
+    public function getEstimatedMarketValue(): float
+    {
+        return $this->getValue() * 1.1;
+    }
+
+    public function getRatioSpeedUpTime(): float
+    {
+        return $this->crafting_time > 0 ? $this->speed_up_energy / $this->crafting_time : 0;
+    }
 }
