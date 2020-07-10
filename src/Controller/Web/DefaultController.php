@@ -2,8 +2,7 @@
 
 namespace App\Controller\Web;
 
-use App\Form\ImportForm;
-use App\Services\BlueprintManager;
+use App\Services\PublicFileManager;
 use PhpOffice\PhpSpreadsheet\Exception;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -21,12 +20,15 @@ class DefaultController extends AbstractController
     }
 
     /**
-     * @Annotation\Route("/file/download/{filename}", name="file.download", methods={"GET"})
+     * @Annotation\Route("/files/{filename}", name="file.download", methods={"GET"})
+     * @param string $filename
+     * @param PublicFileManager $fileManager
      * @return Response
      */
-//    public function download(string $filename) {
-//
-//    }
+    public function download(string $filename, PublicFileManager $fileManager)
+    {
+        return $fileManager->streamFile($filename);
+    }
 
     /**
      * @Annotation\Route("/dev/phpinfo", name="php_info", methods={"GET"})
