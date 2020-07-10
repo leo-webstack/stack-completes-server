@@ -1,22 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.eb5098ea.chunk.css",
-    "main.js": "/static/js/main.297ec5d5.chunk.js",
-    "main.js.map": "/static/js/main.297ec5d5.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.ac0c3559.js",
-    "runtime-main.js.map": "/static/js/runtime-main.ac0c3559.js.map",
-    "static/js/2.9959b639.chunk.js": "/static/js/2.9959b639.chunk.js",
-    "static/js/2.9959b639.chunk.js.map": "/static/js/2.9959b639.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.d1412cd7be585ace818972811257347d.js": "/precache-manifest.d1412cd7be585ace818972811257347d.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.eb5098ea.chunk.css.map": "/static/css/main.eb5098ea.chunk.css.map",
-    "static/js/2.9959b639.chunk.js.LICENSE.txt": "/static/js/2.9959b639.chunk.js.LICENSE.txt"
+    "main.css": "/portfolio/static/css/main.b922a737.chunk.css",
+    "main.js": "/portfolio/static/js/main.9846282d.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.9846282d.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.209c2d7e.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.209c2d7e.js.map",
+    "static/css/2.cbd3d934.chunk.css": "/portfolio/static/css/2.cbd3d934.chunk.css",
+    "static/js/2.e42c52c1.chunk.js": "/portfolio/static/js/2.e42c52c1.chunk.js",
+    "static/js/2.e42c52c1.chunk.js.map": "/portfolio/static/js/2.e42c52c1.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "precache-manifest.8ee24b163b98725dd167c7fdf0485f11.js": "/portfolio/precache-manifest.8ee24b163b98725dd167c7fdf0485f11.js",
+    "service-worker.js": "/portfolio/service-worker.js",
+    "static/css/2.cbd3d934.chunk.css.map": "/portfolio/static/css/2.cbd3d934.chunk.css.map",
+    "static/css/main.b922a737.chunk.css.map": "/portfolio/static/css/main.b922a737.chunk.css.map",
+    "static/js/2.e42c52c1.chunk.js.LICENSE.txt": "/portfolio/static/js/2.e42c52c1.chunk.js.LICENSE.txt",
+    "static/media/beach.jpg": "/portfolio/static/media/beach.009b6843.jpg",
+    "static/media/semantic.min.css": "/portfolio/static/media/outline-icons.ef60a4f6.woff",
+    "static/media/portrait.jpg": "/portfolio/static/media/portrait.4e522138.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.ac0c3559.js",
-    "static/js/2.9959b639.chunk.js",
-    "static/css/main.eb5098ea.chunk.css",
-    "static/js/main.297ec5d5.chunk.js"
+    "static/js/runtime-main.209c2d7e.js",
+    "static/css/2.cbd3d934.chunk.css",
+    "static/js/2.e42c52c1.chunk.js",
+    "static/css/main.b922a737.chunk.css",
+    "static/js/main.9846282d.chunk.js"
   ]
 }
